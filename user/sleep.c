@@ -5,6 +5,12 @@
 int
 main(int argc, char *argv[])
 {
-  wait(argc);
+  int i = 0;
+  if (argc < 2) {
+    printf("no argument for sleep\n");
+    exit(1);
+  }
+  i = atoi(argv[1]);
+  sleep(i);
   exit(0);
 }
